@@ -12,14 +12,14 @@
         <!--配置连接池属性-->
         <property name="driverClass" value="${driver}"/>
         <property name="jdbcUrl" value="${url}"/>
-        <property name="user" value="${username}"/>
+        <property name="user" value="${user}"/>
         <property name="password" value="${password}"/>
 
         <!--连接池的私有属性-->
         <property name="maxPoolSize" value="30"/>
         <property name="minPoolSize" value="10"/>
         <property name="autoCommitOnClose" value="false"/>
-        <property name="checkoutTimeout" value="1000"/>
+        <property name="checkoutTimeout" value="60000"/>
         <!--失败重连数-->
         <property name="acquireRetryAttempts" value="2"/>
     </bean>
