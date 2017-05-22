@@ -9,8 +9,6 @@ import org.seckill.exception.SeckillException;
 
 import java.util.List;
 
-import static javafx.scene.input.KeyCode.R;
-
 /**
  * 业务接口：站在使用者角度设计接口
  * 三个方面：

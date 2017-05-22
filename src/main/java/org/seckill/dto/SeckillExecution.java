@@ -66,4 +66,14 @@ public class SeckillExecution {
     public void setSuccessSeckilled(SuccessSeckilled successSeckilled) {
         this.successSeckilled = successSeckilled;
     }
+
+    @Override
+    public String toString() {
+        return "SeckillExecution{" +
+                "seckillId=" + seckillId +
+                ", state=" + state +
+                ", stateInfo='" + stateInfo + '\'' +
+                ", successSeckilled=" + successSeckilled +
+                '}';
+    }
 }
