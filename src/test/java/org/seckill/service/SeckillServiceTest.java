@@ -16,6 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
+import static javafx.scene.input.KeyCode.L;
 import static org.junit.Assert.*;
 
 /**
@@ -69,4 +70,16 @@ public class SeckillServiceTest {
         }
     }
 
+    @Test
+    public void executeSeckillProcedure(){
+        long seckillId = 1005L;
+        long userPhone = 13528581968L;
+        Exposer exposer =  seckillService.exporttSeckillUrl(seckillId);
+        if (exposer.isExposed()){
+            String md5 = exposer.getMd5();
+            SeckillExecution seckillExecution = seckillService.executeSeckillProcedure(seckillId,userPhone,md5);
+            logger.info(seckillExecution.getStateInfo());
+        }
+
+    }
 }

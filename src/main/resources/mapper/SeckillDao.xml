@@ -37,4 +37,14 @@
           create_Time DESC
         limit #{offset},#{limit}
     </select>
+
+    <!--使用mabatis调用存储过程-->
+    <select id="killByProcedure" statementType="CALLABLE">
+       call execute_seckill(
+           #{seckillId,jdbcType=BIGINT,mode=IN},
+           #{userPhone,jdbcType=BIGINT,mode=IN},
+           #{killTime,jdbcType=TIMESTAMP,mode=IN},
+           #{result,jdbcType=INTEGER,mode=OUT}
+       )
+    </select>
 </mapper>
